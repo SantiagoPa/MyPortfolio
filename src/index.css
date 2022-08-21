@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap");
+
+* {
+  font-family: "Ubuntu Mono", monospace;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply inline-block text-primary px-3 py-5 rounded-lg w-max
+    cursor-pointer border-2 border-primary ease-in-out duration-200
+    hover:bg-white hover:text-fondo hover:border-transparent;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-fondo;
+  }
+
+  .img {
+    @apply block w-full object-cover;
+  }
+
+  .nav-item{
+    @apply text-primary-ligth hover:text-white bg-transparent
+    p-3 text-lg hover:bg-[rgba(0,0,0,0.3)] rounded-full;
+  }
+
+  .about_card{
+    @apply bg-fondo-variant ring-2 ring-transparent rounded-3xl ease-linear duration-300 
+    p-5 text-lg text-center hover:bg-transparent hover:ring-primary-variant cursor-default
+    ;
+  }
+
+  .content_experience {
+    @apply bg-fondo-variant p-[2.4rem_5rem] rounded-3xl
+    ring-2 ring-primary hover:bg-transparent text-white cursor-default ease-in duration-300;
+  }
+
+  .experience_details{
+    @apply flex gap-4 flex-row items-center
+  }
+
+  .content_article {
+    @apply bg-fondo-variant p-5 rounded-3xl flex flex-col justify-center items-center ring-2 
+    ring-transparent gap-y-3 ease-in duration-300 hover:bg-transparent hover:ring-primary-variant
+    ;
+  }
+}
+
+body {
+  height: 100vh;
+  background-color: rgb(31 31 56);
+  /* background-color: #f1f1f1; */
+  line-height: 1rem;
+  background-image: url('./assets/bg-texture.png');
+  color: #fff;
+}
