@@ -1,5 +1,5 @@
 import {
-  SiMaterialui,
+  SiMui,
   SiPostgresql,
   SiTailwindcss,
   SiReact,
@@ -91,7 +91,7 @@ export const Experience = () => {
             </article>
 
             <article className="experience_details">
-              <SiMaterialui className="text-4xl text-primary" />
+              <SiMui className="text-4xl text-primary" />
               <div>
                 <h4>Material UI</h4>
                 <small className="text-primary-ligth">intermediate</small>

@@ -8,7 +8,7 @@ export const HeaderSocial = () => {
         after:bg-primary  md:flex lg:flex xl:flex 2xl:flex
      ">
       <a
-        href="https://www.linkedin.com/in/santiago-padilla-6562ba205/"
+        href="https://www.linkedin.com/in/santiago-padilla-arcia-6562ba205/"
         target="_blank"
         className="text-primary hover:text-white"
       >

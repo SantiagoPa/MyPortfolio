@@ -1,4 +1,4 @@
-import CVpdf from "../../assets/cv.pdf";
+import CVpdf from "../../assets/CV.pdf";
 
 export const CV = () => {
   return (

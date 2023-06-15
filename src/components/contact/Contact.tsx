@@ -1,5 +1,4 @@
 import { FormEvent, useRef } from "react";
-import emailjs from "emailjs-com";
 
 import { HiOutlineMail } from "react-icons/hi";
 import { SiWhatsapp } from "react-icons/si";
@@ -12,32 +11,32 @@ export const Contact = () => {
 
   const sendEmail = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    emailjs
-      .sendForm(
-        getEnvVariables().VITE_SERVICE_ID,
-        getEnvVariables().VITE_TEMPLATE_ID,
-        e.currentTarget,
-        getEnvVariables().VITE_EMAIL_PUBLIC_KEY
-      )
-      .then(
-        (result) => {
-          if (result.status === 200) {
-            Swal.fire(
-              "successful task!",
-              "the email has been sent successfully",
-              "success"
-            );
-          }
-        },
-        (error) => {
-          Swal.fire({
-            icon: "error",
-            title: "Oops...",
-            text: "Something went wrong!",
-          });
-          console.log(error);
-        }
-      );
+    // emailjs
+    //   .sendForm(
+    //     getEnvVariables().VITE_SERVICE_ID,
+    //     getEnvVariables().VITE_TEMPLATE_ID,
+    //     e.currentTarget,
+    //     getEnvVariables().VITE_EMAIL_PUBLIC_KEY
+    //   )
+    //   .then(
+    //     (result) => {
+    //       if (result.status === 200) {
+    //         Swal.fire(
+    //           "successful task!",
+    //           "the email has been sent successfully",
+    //           "success"
+    //         );
+    //       }
+    //     },
+    //     (error) => {
+    //       Swal.fire({
+    //         icon: "error",
+    //         title: "Oops...",
+    //         text: "Something went wrong!",
+    //       });
+    //       console.log(error);
+    //     }
+    //   );
     e.currentTarget.reset();
     input.current?.focus();
   };
