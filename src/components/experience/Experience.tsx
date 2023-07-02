@@ -20,7 +20,7 @@ export const Experience = () => {
   return (
     <section
       id="experience"
-      className="h-full sm:h-full md:h-screen w-full mt-40 lg:mt-96 xl:mt-40 flex flex-col items-center"
+      className="h-full sm:h-full md:h-screen w-full lg:mt-96 xl:mt-40 flex flex-col items-center"
     >
       <h5>What Skills I Have</h5>
       <h2 className="text-primary text-3xl">My Experience</h2>
@@ -45,9 +45,10 @@ export const Experience = () => {
           </h3>
           <div
             className="
-              grid grid-cols-1 gap-2
+              grid grid-cols-0 gap-2
               sm:grid-cols-2 sm:place-self-auto
               md:grid-cols-2 
+              lg:grid-cols-2
             "
           >
             <article className="experience_details">
@@ -107,9 +108,10 @@ export const Experience = () => {
           </h3>
           <div
             className="
-            grid grid-cols-1 gap-2
+            grid grid-cols-0 gap-2
             sm:grid-cols-2 sm:place-self-auto
             md:grid-cols-2 
+            lg:grid-cols-2
             "
           >
             <article className="experience_details">

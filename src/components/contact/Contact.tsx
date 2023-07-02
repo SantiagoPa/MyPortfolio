@@ -46,7 +46,7 @@ export const Contact = () => {
       id="contact"
       className="
         flex flex-col items-center
-        h-full w-full mt-40 
+        h-full w-full 
         sm:h-full
         lg:mt-96 
         xl:h-screen xl:mt-40 

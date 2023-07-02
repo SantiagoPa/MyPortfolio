@@ -4,10 +4,7 @@ import MeAbout from "../../assets/me-about.jpg";
 
 export const About = () => {
   return (
-    <section
-      id="about"
-      className="w-full mt-40 flex flex-col items-center"
-    >
+    <section id="about" className="h-screen w-full flex flex-col items-center">
       <h5>Get to Know</h5>
       <h2 className="text-primary text-3xl">About me</h2>
 
@@ -65,7 +62,7 @@ export const About = () => {
                 <FaUserTie className="text-primary text-xl mb-5" />
               </span>
               <h5>Work With</h5>
-              <small>3+ development companies</small>
+              <small>2+ development companies</small>
             </article>
 
             <article className="about_card">
@@ -73,7 +70,7 @@ export const About = () => {
                 <BsFolderCheck className="text-primary text-xl mb-5" />
               </span>
               <h5>Projects</h5>
-              <small>7+ Projects Complete</small>
+              <small>6+ Projects Complete</small>
             </article>
           </div>
 
@@ -87,10 +84,10 @@ export const About = () => {
               xl:mt-8 xl:mb-10 
             "
           >
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum,
-            rem doloremque at quisquam debitis architecto maiores vel libero
-            vitae magni dicta praesentium nemo voluptates earum nesciunt
-            perferendis culpa recusandae voluptate.
+            more than a year of experience in different frontend projects, where
+            I have learned a lot and developed many communication and leadership
+            skills, also with technical skills, clean code and good
+            architectures.
           </p>
 
           <a href="#contact" className="btn btn-primary">
