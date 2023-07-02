@@ -1,6 +1,5 @@
 
 import { FooterItems } from "./FooterItems";
-import { FooterSocial } from "./FooterSocial";
 
 export const Footer = () => {
   return (
@@ -17,8 +16,6 @@ export const Footer = () => {
       </a>
 
       <FooterItems/>
-
-      <FooterSocial/>
 
       <div className="pb-28 text-fondo h-full">
         <small>&copy; Santiago Dev, All rights reserved</small>

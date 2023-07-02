@@ -4,9 +4,6 @@
 
 1. Clone repository
 2. npm install
-3. change variables of the .env file
-4. customize to your liking
-
 
 # commands
 

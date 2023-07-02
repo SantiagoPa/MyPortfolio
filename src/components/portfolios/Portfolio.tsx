@@ -5,7 +5,7 @@ import portfolio1 from "../../assets/portfolio1.jpeg";
 import portfolio2 from "../../assets/portfolio2.jpeg";
 import portfolio3 from "../../assets/portfolio3.jpeg";
 import portfolio4 from "../../assets/portfolio4.jpeg";
-import portfolio5 from "../../assets/portfolio5.png";
+import portfolio5 from "../../assets/portfolio5.jpeg";
 import portfolio6 from "../../assets/portfolio6.jpeg";
 
 const data: Props[] = [
@@ -42,7 +42,7 @@ const data: Props[] = [
     img: portfolio5,
     title: "My Portfolio - Dev Santiago",
     github: "https://github.com/SantiagoPa/MyPortfolio",
-    demo: "https://github.com",
+    demo: "https://dev-myportfolio-santiago.netlify.app/",
   },
   {
     id: "6",
