@@ -1,10 +1,10 @@
-import CVpdf from "../../assets/CV.pdf";
+import cvPDF from "../../assets/cv.pdf";
 
 export const CV = () => {
   return (
     <div className="mt-9 flex flex-row gap-5 justify-center">
       <a
-        href={CVpdf}
+        href={cvPDF}
         download
         className="text-primary ease-in-out 
                 duration-200 btn
