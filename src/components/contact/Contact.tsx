@@ -1,44 +1,48 @@
-import { FormEvent, useRef } from "react";
-
+import { FormEvent, useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import { HiOutlineMail } from "react-icons/hi";
 import { SiWhatsapp } from "react-icons/si";
 import { getEnvVariables } from "../../helpers";
 import Swal from "sweetalert2";
 
 export const Contact = () => {
-
   const input = useRef<HTMLInputElement>(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   const sendEmail = (e: FormEvent<HTMLFormElement>) => {
+    setIsLoading(true);
     e.preventDefault();
-    // emailjs
-    //   .sendForm(
-    //     getEnvVariables().VITE_SERVICE_ID,
-    //     getEnvVariables().VITE_TEMPLATE_ID,
-    //     e.currentTarget,
-    //     getEnvVariables().VITE_EMAIL_PUBLIC_KEY
-    //   )
-    //   .then(
-    //     (result) => {
-    //       if (result.status === 200) {
-    //         Swal.fire(
-    //           "successful task!",
-    //           "the email has been sent successfully",
-    //           "success"
-    //         );
-    //       }
-    //     },
-    //     (error) => {
-    //       Swal.fire({
-    //         icon: "error",
-    //         title: "Oops...",
-    //         text: "Something went wrong!",
-    //       });
-    //       console.log(error);
-    //     }
-    //   );
+    emailjs
+      .sendForm(
+        getEnvVariables().VITE_SERVICE_ID,
+        getEnvVariables().VITE_TEMPLATE_ID,
+        e.currentTarget,
+        getEnvVariables().VITE_EMAIL_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          if (result.status === 200) {
+            setIsLoading(false);
+            Swal.fire(
+              "successful task!",
+              "the email has been sent successfully",
+              "success"
+            );
+          }
+        },
+        (error) => {
+          setIsLoading(false);
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Something went wrong!",
+          });
+          console.log(error);
+        }
+      );
     e.currentTarget.reset();
     input.current?.focus();
+    setIsLoading(false);
   };
 
   return (
@@ -99,7 +103,10 @@ export const Contact = () => {
         </div>
         {/* End contact options */}
 
-        <form className="flex flex-col justify-center items-center gap-5" onSubmit={sendEmail}>
+        <form
+          className="flex flex-col justify-center items-center gap-5"
+          onSubmit={sendEmail}
+        >
           <input
             ref={input}
             type="text"
@@ -135,7 +142,9 @@ export const Contact = () => {
           ></textarea>
 
           <button type="submit" className="btn btn-primary">
-            Send Message
+            {
+              isLoading ? "Loading..." : "Send Message"
+            }
           </button>
         </form>
         {/* End Form */}
