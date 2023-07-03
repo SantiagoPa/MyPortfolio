@@ -1,8 +1,9 @@
 import { CV } from "./CV";
 import { HeaderSocial } from "./HeaderSocial";
 import Me from "../../assets/me.png";
+import { AboutProps } from "../../interface";
 
-export const Header = () => {
+export const Header = ({ changeNavActive }: AboutProps) => {
   return (
     <header className="h-screen">
       <div className="m-auto container h-full  pt-5 sm:pt-28 md:pt-20 lg:pt-5 xl:pt-16 overflow-hidden text-center relative">
@@ -25,6 +26,7 @@ export const Header = () => {
 
         <a
           href="#contact"
+          onClick={()=>changeNavActive("#contact")}
           className="
           hidden
           text-primary hover:text-white absolute -right-10

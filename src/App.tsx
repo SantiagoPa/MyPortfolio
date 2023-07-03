@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   About,
   Contact,
@@ -9,10 +10,18 @@ import {
 } from "./components";
 
 const App = () => {
+
+  const [isActive, setIsActive] = useState("#");
+
+  const changeNavActive = (navItem: string) => {
+    setIsActive(navItem);
+  } 
+
+
   return (
     <>
-      <Header />
-      <Nav />
+      <Header changeNavActive={changeNavActive} />
+      <Nav isActive={isActive} changeNavActive={changeNavActive} />
       <About />
       <Experience />
       <Portfolio />

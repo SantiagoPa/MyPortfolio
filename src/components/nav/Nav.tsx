@@ -1,11 +1,11 @@
-import { useState } from "react";
 import { AiFillHome, AiFillMessage } from "react-icons/ai";
 import { FaUserAstronaut, FaBook } from "react-icons/fa";
 import { RiCodeFill } from "react-icons/ri";
 
 import "./nav.module.css";
-export const Nav = () => {
-  const [isActive, setIsActive] = useState("#");
+import { NavProps } from "../../interface";
+
+export const Nav = ({ isActive, changeNavActive }: NavProps) => {
 
   return (
     <nav
@@ -23,7 +23,7 @@ export const Nav = () => {
             ? "nav-item bg-slate-900 text-white"
             : "nav-item"
         }
-        onClick={() => setIsActive("#")}
+        onClick={() => changeNavActive("#")}
       >
         <AiFillHome />
       </a>
@@ -34,7 +34,7 @@ export const Nav = () => {
             ? "nav-item bg-slate-900 text-white"
             : "nav-item"
         }
-        onClick={() => setIsActive("#about")}
+        onClick={() => changeNavActive("#about")}
       >
         <FaUserAstronaut />
       </a>
@@ -45,7 +45,7 @@ export const Nav = () => {
             ? "nav-item bg-slate-900 text-white"
             : "nav-item"
         }
-        onClick={() => setIsActive("#experience")}
+        onClick={() => changeNavActive("#experience")}
       >
         <FaBook />
       </a>
@@ -56,7 +56,7 @@ export const Nav = () => {
             ? "nav-item bg-slate-900 text-white"
             : "nav-item"
         }
-        onClick={() => setIsActive("#portfolio")}
+        onClick={() => changeNavActive("#portfolio")}
       >
         <RiCodeFill />
       </a>
@@ -67,7 +67,7 @@ export const Nav = () => {
             ? "nav-item bg-slate-900 text-white"
             : "nav-item"
         }
-        onClick={() => setIsActive("#contact")}
+        onClick={() => changeNavActive("#contact")}
       >
         <AiFillMessage />
       </a>
