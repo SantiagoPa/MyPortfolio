@@ -93,7 +93,7 @@ export const Contact = () => {
             <h4>WhatsApp</h4>
             <h5>+57 322 3575357</h5>
             <a
-              className="text-primary mt-3 inline-block text-sm"
+              className="text-primary mt-3 inline-block text-lg"
               href="https://api.whatsapp.com/send?phone=573223575357"
               target="_blank"
             >
