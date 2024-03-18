@@ -1,6 +1,7 @@
 import { CV } from "./CV";
 import { HeaderSocial } from "./HeaderSocial";
-import Me from "../../assets/me.png";
+// import Me from "../../assets/me.png";
+import Me from "../../assets/mev1.jpg";
 import { AboutProps } from "../../interface";
 
 export const Header = ({ changeNavActive }: AboutProps) => {
@@ -13,7 +14,7 @@ export const Header = ({ changeNavActive }: AboutProps) => {
         <CV />
         <HeaderSocial />
 
-        <div
+        {/* <div
           className="
           bg-gradient-to-b from-primary to-transparent
           w-64 h-96 absolute
@@ -22,7 +23,7 @@ export const Header = ({ changeNavActive }: AboutProps) => {
         "
         >
           <img src={Me} alt="me" />
-        </div>
+        </div> */}
 
         <a
           href="#contact"

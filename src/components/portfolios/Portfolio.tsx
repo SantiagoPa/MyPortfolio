@@ -44,13 +44,13 @@ const data: Props[] = [
     github: "https://github.com/SantiagoPa/MyPortfolio",
     demo: "https://dev-myportfolio-santiago.netlify.app/",
   },
-  {
-    id: "6",
-    img: portfolio6,
-    title: "Voting System  with Blockchain",
-    github: "https://github.com/canielcm/micro_services_voting_system",
-    demo: "https://votingsystemunicor.xyz/auth/login",
-  },
+  // {
+  //   id: "6",
+  //   img: portfolio6,
+  //   title: "Voting System  with Blockchain",
+  //   github: "https://github.com/canielcm/micro_services_voting_system",
+  //   demo: "https://votingsystemunicor.xyz/auth/login",
+  // },
 ];
 
 export const Portfolio = () => {

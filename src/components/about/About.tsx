@@ -1,6 +1,7 @@
 import { FaAward, FaUserTie } from "react-icons/fa";
 import { BsFolderCheck } from "react-icons/bs";
-import MeAbout from "../../assets/me-about.jpg";
+// import MeAbout from "../../assets/me-about.jpg";
+import MeAbout from "../../assets/me-aboutv1.jpg";
 
 export const About = () => {
   return (
@@ -35,12 +36,11 @@ export const About = () => {
             sm:w-[65%]
             md:w-full
             lg:w-full
-            rounded-3xl overflow-hidden rotate-12
-            hover:rotate-0
+            rounded-3xl overflow-hidden
             "
           >
             <img
-              className="img h-min xl:h-96 lg:h-min sm:h-min"
+              className="img h-min xl:h-[36rem] lg:h-min sm:h-min"
               src={MeAbout}
               alt="about image"
             />
