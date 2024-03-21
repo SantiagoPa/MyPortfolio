@@ -14,20 +14,20 @@ export const Header = ({ changeNavActive }: AboutProps) => {
         <CV />
         <HeaderSocial />
 
-        {/* <div
+        <div
+          // bg-gradient-to-b from-primary to-transparent
           className="
-          bg-gradient-to-b from-primary to-transparent
           w-64 h-96 absolute
           left-[calc(50%-8rem)] mt-16 rounded-t-xl
-          pt-20 pb-5 pl-5 pr-5
+          pt-5 pb-5 pl-5 pr-5
         "
         >
-          <img src={Me} alt="me" />
-        </div> */}
+          <img src={Me} alt="me" className="rounded-lg" />
+        </div>
 
         <a
           href="#contact"
-          onClick={()=>changeNavActive("#contact")}
+          onClick={() => changeNavActive("#contact")}
           className="
           hidden
           text-primary hover:text-white absolute -right-10

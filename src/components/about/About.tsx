@@ -54,7 +54,7 @@ export const About = () => {
                 <FaAward className="text-primary text-xl mb-5" />
               </span>
               <h5>Experience</h5>
-              <small>1+ Years Working</small>
+              <small>2+ Years Working</small>
             </article>
 
             <article className="about_card">

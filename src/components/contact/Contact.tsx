@@ -1,48 +1,50 @@
 import { FormEvent, useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
+import { sendForm } from "@emailjs/browser";
 import { HiOutlineMail } from "react-icons/hi";
 import { SiWhatsapp } from "react-icons/si";
 import { getEnvVariables } from "../../helpers";
 import Swal from "sweetalert2";
+import { useForm } from "../../hooks";
 
 export const Contact = () => {
   const input = useRef<HTMLInputElement>(null);
   const [isLoading, setIsLoading] = useState(false);
+  const { name, email, message, reset, handleInputChange } = useForm({
+    name: "",
+    email: "",
+    message: "",
+  });
 
-  const sendEmail = (e: FormEvent<HTMLFormElement>) => {
+  const sendEmail = async (e: FormEvent<HTMLFormElement>) => {
     setIsLoading(true);
     e.preventDefault();
-    emailjs
-      .sendForm(
+    try {
+      const { status } = await sendForm(
         getEnvVariables().VITE_SERVICE_ID,
         getEnvVariables().VITE_TEMPLATE_ID,
         e.currentTarget,
         getEnvVariables().VITE_EMAIL_PUBLIC_KEY
-      )
-      .then(
-        (result) => {
-          if (result.status === 200) {
-            setIsLoading(false);
-            Swal.fire(
-              "successful task!",
-              "the email has been sent successfully",
-              "success"
-            );
-          }
-        },
-        (error) => {
-          setIsLoading(false);
-          Swal.fire({
-            icon: "error",
-            title: "Oops...",
-            text: "Something went wrong!",
-          });
-          console.log(error);
-        }
       );
-    e.currentTarget.reset();
-    input.current?.focus();
-    setIsLoading(false);
+      if (status === 200) {
+        setIsLoading(false);
+        Swal.fire(
+          "successful task!",
+          "the email has been sent successfully",
+          "success"
+        );
+        // e.currentTarget.reset();
+        reset();
+        input.current?.focus();
+      }
+    } catch (error) {
+      setIsLoading(false);
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Something went wrong!",
+      });
+      console.log(error);
+    }
   };
 
   return (
@@ -111,6 +113,8 @@ export const Contact = () => {
             ref={input}
             type="text"
             name="name"
+            value={name}
+            onChange={handleInputChange}
             placeholder="Your Full Name"
             required
             className="
@@ -127,6 +131,8 @@ export const Contact = () => {
             w-full p-6 rounded-lg bg-transparent ring-2
             ring-primary-variant text-white
             "
+            value={email}
+            onChange={handleInputChange}
             required
           />
 
@@ -139,12 +145,16 @@ export const Contact = () => {
               resize-none w-full p-6 rounded-lg bg-transparent ring-2
               ring-primary-variant text-white
             "
+            value={message}
+            onChange={handleInputChange}
           ></textarea>
 
-          <button type="submit" className="btn btn-primary">
-            {
-              isLoading ? "Loading..." : "Send Message"
-            }
+          <button
+            type="submit"
+            className={`${isLoading ? "btn btn-loading" : "btn btn-primary"}`}
+            disabled={isLoading}
+          >
+            {isLoading ? "Loading..." : "Send Message"}
           </button>
         </form>
         {/* End Form */}

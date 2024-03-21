@@ -9,11 +9,12 @@ import {
   SiMongodb,
   SiFirebase,
   SiExpress,
+  SiNestjs,
 } from "react-icons/si";
 
 import { FaNodeJs } from "react-icons/fa";
 
-import { AiFillApi } from "react-icons/ai";
+// import { AiFillApi } from "react-icons/ai";
 
 
 export const Experience = () => {
@@ -87,7 +88,7 @@ export const Experience = () => {
               <SiTypescript className="text-4xl text-primary" />
               <div>
                 <h4>TypeScript</h4>
-                <small className="text-primary-ligth">intermediate</small>
+                <small className="text-primary-ligth">Experienced</small>
               </div>
             </article>
 
@@ -95,7 +96,7 @@ export const Experience = () => {
               <SiMui className="text-4xl text-primary" />
               <div>
                 <h4>Material UI</h4>
-                <small className="text-primary-ligth">intermediate</small>
+                <small className="text-primary-ligth">Experienced</small>
               </div>
             </article>
           </div>
@@ -146,18 +147,26 @@ export const Experience = () => {
               </div>
             </article>
 
-            <article className="experience_details">
+            {/* <article className="experience_details">
               <AiFillApi className="text-4xl text-primary" />
               <div>
                 <h4>Api Services</h4>
                 <small className="text-primary-ligth">intermediate</small>
               </div>
-            </article>
+            </article> */}
 
             <article className="experience_details">
               <SiFirebase className="text-4xl text-primary" />
               <div>
                 <h4>Firebase</h4>
+                <small className="text-primary-ligth">intermediate</small>
+              </div>
+            </article>
+
+            <article className="experience_details">
+              <SiNestjs className="text-4xl text-primary" />
+              <div>
+                <h4>NestJS</h4>
                 <small className="text-primary-ligth">intermediate</small>
               </div>
             </article>
