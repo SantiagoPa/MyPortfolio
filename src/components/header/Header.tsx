@@ -1,7 +1,8 @@
 import { CV } from "./CV";
 import { HeaderSocial } from "./HeaderSocial";
 // import Me from "../../assets/me.png";
-import Me from "../../assets/mev1.jpg";
+// import Me from "../../assets/mev1.jpg";
+import Assets from '../Assets';
 import { AboutProps } from "../../interface";
 
 export const Header = ({ changeNavActive }: AboutProps) => {
@@ -22,7 +23,7 @@ export const Header = ({ changeNavActive }: AboutProps) => {
           pt-5 pb-5 pl-5 pr-5
         "
         >
-          <img src={Me} alt="me" className="rounded-lg" />
+          <img src={Assets.Me} alt="me" className="rounded-lg" />
         </div>
 
         <a

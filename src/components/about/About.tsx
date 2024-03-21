@@ -1,7 +1,8 @@
 import { FaAward, FaUserTie } from "react-icons/fa";
 import { BsFolderCheck } from "react-icons/bs";
 // import MeAbout from "../../assets/me-about.jpg";
-import MeAbout from "../../assets/me-aboutv1.jpg";
+// import MeAbout from "../../assets/me-aboutv1.jpg";
+import Assets from '../Assets';
 
 export const About = () => {
   return (
@@ -41,7 +42,7 @@ export const About = () => {
           >
             <img
               className="img h-min xl:h-[36rem] lg:h-min sm:h-min"
-              src={MeAbout}
+              src={Assets.MeAbout}
               alt="about image"
             />
           </div>
