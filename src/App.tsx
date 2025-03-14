@@ -15,7 +15,7 @@ const App = () => {
 
   const changeNavActive = (navItem: string) => {
     setIsActive(navItem);
-  } 
+  }
 
 
   return (
